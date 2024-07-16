@@ -1,7 +1,7 @@
 #include <numeric>
 #include <vector>
 #include <algorithm>
-
+#include <string>
 using namespace std;
 
 class Solution {
