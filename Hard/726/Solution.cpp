@@ -52,28 +52,6 @@ public:
 	}
 
 private:
-	// TODO: Refactor using isalpha(), isdigit(), islower(), and isupper() instead of check().
-	enum CharacterType {
-		UPPERCASE,
-		LOWERCASE,
-		DIGIT,
-		PARENTHESES,
-		OTHER
-	};
-
-	inline CharacterType check(char c) const {
-		if (c >= 'A' && c <= 'Z')
-			return UPPERCASE;
-		else if (c >= 'a' && c <= 'z')
-			return LOWERCASE;
-		else if (c >= '0' && c <= '9')
-			return DIGIT;
-		else if (c == '(' || c == ')')
-			return PARENTHESES;
-		else
-			return OTHER;
-	}
-
 	inline string parseAtom(const string& formula, uint32_t& index) {
 		string atom;
 		atom += formula[index++];
